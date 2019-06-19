@@ -4,7 +4,8 @@ First, write a method, dictionary, that contains the words-to-be-substituted and
 =end
 
 #def dictionary
-    dictionary_hash={
+
+dictionary_hash = {
         "hello" => "hi",
         "to" => "2",
         "two" => "2",
@@ -15,7 +16,8 @@ First, write a method, dictionary, that contains the words-to-be-substituted and
         "you" => "u",
         "at" => "@", 
         "and" => "&"
-    }    
+    }
+ 
 #end
 
 def word_substituter(tweet)
@@ -25,14 +27,13 @@ def word_substituter(tweet)
     while i < tweet_array.length
 
         dictionary_hash.each do |long, short|
-            if tweet_array[i]==long
+            if tweet_array[i] == long
                 tweet_array[i] = short
             end
         end
         
         i+=
     end
-#    binding.pry
 
     return tweet_array.join
 end
